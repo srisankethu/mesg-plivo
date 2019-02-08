@@ -1,0 +1,88 @@
+name: "MESG service for Plivo"
+sid: mesg-plivo
+description: "Send SMS and make Calls with Plivo"
+tasks:
+  sendSMS:
+    description: "Send SMS with Plivo"
+    inputs:
+      authId:
+        name: "Plivo Account authId"
+        description: "The Plivo Account authId that you can create here https://www.console.plivo.com/account"
+        type: String
+      authToken:
+        name: "Twilio Account Auth Token"
+        description: "The Plivo Account Auth Token that you can create here https://www.console.plivo.com/account"
+        type: String
+      src:
+        name: "Source"
+        description: "The account to send the sms from"
+        type: String
+      dest:
+        name: "Destination"
+        description: "The recipient of the sms"
+        type: String
+      text:
+        name: "Body"
+        description: "The body of the sms"
+        type: String
+    outputs:
+      success:
+        name: "Success"
+        description: "When the sms is successfully sent"
+        data:
+          status:
+            name: "Status"
+            description: "Status returned by the Plivo SMS API"
+            type: String
+      failure:
+        name: "Failure"
+        description: "when an error occurs when trying to send the sms (this can be any kind of error, wrong phone number, Plivo SMS API down...)"
+        data:
+          message:
+            name: "Message"
+            description: "Error message"
+            type: String
+  makeCall:
+    description: "Make Voice Calls with Plivo"
+    inputs:
+      authId:
+        name: "Plivo Account authId"
+        description: "The Plivo Account authId that you can create here https://www.console.plivo.com/account"
+        type: String
+      authToken:
+        name: "Twilio Account Auth Token"
+        description: "The Plivo Account Auth Token that you can create here https://www.console.plivo.com/account"
+        type: String
+      from:
+        name: "from"
+        description: "The account to make a voice call from"
+        type: String
+      to:
+        name: "to"
+        description: "The recipient of the voice call"
+        type: String
+      account_url:
+        name: "Account URL"
+        description: "The URL invoked by Plivo when the outbound call is answered"
+        type: String
+      account_method:
+        name: "Account Method"
+        description: "he method used to call the answer_url"
+        type: String
+    outputs:
+      success:
+        name: "Success"
+        description: "When the voice call is successfully made"
+        data:
+          status:
+            name: "Status"
+            description: "Status returned by the Plivo Voice API"
+            type: String
+      failure:
+        name: "Failure"
+        description: "when an error occurs when trying to make a voice call (this can be any kind of error, wrong phone number, Plivo Voice API down...)"
+        data:
+          message:
+            name: "Message"
+            description: "Error message"
+            type: String

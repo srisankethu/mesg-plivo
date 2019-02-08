@@ -1,0 +1,29 @@
+{
+  "name": "mesg-plivo",
+  "version": "1.0.0",
+  "description": "MESG service for Plivo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srisankethu/mesg-plivo.git"
+  },
+  "keywords": [
+    "MESG",
+    "plivo",
+    "SMS",
+    "calls"
+  ],
+  "author": "Sri Sanketh Uppalapati",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srisankethu/mesg-plivo/issues"
+  },
+  "homepage": "https://github.com/srisankethu/mesg-plivo#readme",
+  "dependencies": {
+    "mesg-js": "^2.0.1",
+    "plivo": "^4.0.7"
+  }
+}
