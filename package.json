@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/srisankethu/mesg-plivo#readme",
   "dependencies": {
-    "mesg-js": "^2.0.1",
+    "@liteflow/service": "^1.0.7",
     "plivo": "^4.0.7"
   }
 }
